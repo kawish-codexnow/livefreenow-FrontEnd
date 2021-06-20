@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #001627;
+  --nav-link-color: #004e8a;
+  --primary-hover-color: #004e8a;
+  --primary-dark-color: #222222;
+  --background-color: #eef7fc;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #001627;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  text-align: justify;
+}
+
+a {
+  color: var(--nav-link-color);
+  transition: 0.3s ease all;
+}
+
+a:hover {
+  color: #001627;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+.login-bg,
+.signup-bg {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.login-bg.background-1 {
+  background: url(../../assets/images/login.jpg);
+  /* background: url(../images/login.jpg); */
+  animation: fadeIn;
+  animation-duration: 2s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-bg.background-1 {
+  background: url(../../assets/images/signup.jpg);
+  animation: fadeIn;
+  animation-duration: 2s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.login-overlay.overlay-1,
+.signup-overlay.overlay-1 {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 52, 81, 0.4) 0%,
+    rgb(0 22 39 / 0.95) 100%
+  );
+}
+
+.login-overlay,
+.signup-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  padding: 0 50px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay-content h1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.overlay-content .description {
+  color: #fff;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.authentication-form {
+  font-size: 0.9rem;
+  width: 70%;
+  animation: fadeIn;
+  animation-duration: 2s;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#login .logo h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.authentication-form h3 {
+  color: var(--primary-dark-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.field {
+  width: 100%;
+  position: relative;
+  margin: 2.5rem auto 2.5rem;
+}
+
+.loop-input {
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #9a9a9a;
+  overflow: hidden;
+  margin: 0%;
+  width: 100%;
+  padding: 0.25rem 0;
+  background: none;
+  color: #000;
+}
+
+.loop-label {
+  position: absolute;
+  transform: translateY(-2rem);
+  transform-origin: 0%;
+  transition: transform 400ms;
+  color: #9a9a9a;
+  font-size: 13px;
+}
+
+.hasText input {
+  border-bottom: 1px solid #001627;
+}
+
+.hasText label {
+  color: #001627;
+}
+
+.field:focus-within .loop-label,
+.loop-input:not(:placeholder-shown) + .loop-label {
+  transform: scale(0.8) translateY(-4rem);
+}
+
+.field:focus-within .loop-label {
+  color: #001627;
+}
+
+.field:focus-within .loop-input {
+  border-bottom: 1px solid #001627;
+}
+
+.authentication-form .btn-codex {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  background-color: transparent;
+  color: #001627;
+  border: 2px solid #001627;
+}
+
+.authentication-form .btn-codex:hover {
+  background: #001627;
+  color: #fff;
+}
+
+.authentication-form .btn-codex:hover .rotate-spinner {
+  color: #fff;
+}
+
+.register {
+  color: #40545a;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.custom-control-label {
+  color: #aaa;
+}
+
+.custom-control-label a {
+  color: var(--primary-dark-color);
+}
+
+.custom-control-label a:hover {
+  color: #001627;
+}
+
+.text-right a {
+  color: var(--primary-dark-color);
+}
+.text-right a:hover {
+  color: #001627;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #001627;
+  background-color: #001627;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #001627;
+}
+
+.rotate-spinner {
+  color: #001627;
+  margin: 0 auto;
+  display: inline-block;
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .authentication-form {
+    padding: 20px;
+    margin: 50px auto 50px auto;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  /* .mobile-bg-signup {
+      background: url(../../assets/images/signup.jpg);
+      animation: fadeIn;
+      animation-duration: 2s;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .mobile-bg-login {
+      background: url(../../assets/images/login.jpg);
+      animation: fadeIn;
+      animation-duration: 2s;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    } */
+  .mobile-bg-signup,
+  .mobile-bg-login {
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .authentication-form {
+    margin: 150px 0 150px 0;
+    width: 100%;
+  }
+}
